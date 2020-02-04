@@ -24,6 +24,18 @@ public class Exam03Form {
 		this.price3 = price3;
 	}
 	
+	public Integer getIntPrice1() {
+		return Integer.parseInt(price1);
+	}
+	
+	public Integer getIntPrice2() {
+		return Integer.parseInt(price2);
+	}
+	
+	public Integer getIntPrice3() {
+		return Integer.parseInt(price3);
+	}
+	
 	@Override
 	public String toString() {
 		return "Exam03Form [price1=" + price1 + ", price2=" + price2 + ", price3=" + price3 + "]";
