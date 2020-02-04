@@ -22,17 +22,17 @@ public class Exam03Controller {
 	}
 	
 	@RequestMapping("")
-	public String index(Exam03Form form) {
+	public String index() {
+		return "/exam03/exam03";
+	}
+	
+	@RequestMapping("/result")
+	public String result(Exam03Form form) {
 		Integer nonTaxSumPrice = form.getIntPrice1() + form.getIntPrice2() + form.getIntPrice3();
 		Integer taxSumPrice = nonTaxSumPrice * 110 / 100;
 		
 		application.setAttribute("nonTaxSumPrice",nonTaxSumPrice);
 		application.setAttribute("taxSumPrice",taxSumPrice);
-		return "/exam03/exam03";
-	}
-	
-	@RequestMapping("/result")
-	public String result() {
 		return "/exam03/exam03-result";
 	}
 	
