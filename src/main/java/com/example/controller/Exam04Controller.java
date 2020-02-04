@@ -6,5 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/exam04")
 public class Exam04Controller {
-
+	
+	
+	
 }
