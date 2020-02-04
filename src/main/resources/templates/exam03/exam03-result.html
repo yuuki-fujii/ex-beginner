@@ -6,10 +6,12 @@
 </head>
 <body>
 <h1>合計金額</h1>
-<div>◼税抜き価格</div>️️
-<span th:text="${application.nonTaxSumPrice}"></span>円
-<div>◼税込み価格</div>
-️<span th:text="${application.taxSumPrice}"></span>円
-
+<div>
+◼税抜き価格<br>
+<span th:text="${#numbers.formatInteger(application.nonTaxSumPrice,0,'COMMA')}"></span>円
+</div>️️
+<div>◼税込み価格<br>
+<span th:text="${#numbers.formatInteger(application.taxSumPrice,0,'COMMA')}"></span>円
+</div>
 </body>
 </html>
